@@ -1,0 +1,15 @@
+page-cd-list {
+    .rendu{
+        div, ion-item{
+            background-color: color($colors, blanc);
+            cursor: pointer;
+        }
+    }
+
+    .preter{
+        div, ion-item{
+            background-color:color($colors, ligth-blue);
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+page-lend-book {
+    .rendu{
+        ion-card-content, ion-card-header, ion-grid{
+            background-color: color($colors, secondary);
+        }
+    }
+
+    .preter{
+        ion-card-content, ion-card-header, ion-grid{
+            background-color:color($colors, danger);
+        }
+    }
+}

@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar>
+      <ion-buttons>
+        <button ion-button clear (click)="onDismiss()">Fermer</button>
+      </ion-buttons>
+      <ion-title>{{ disque.title}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card [ngClass]="{'rendu':disque.etat, 'preter': !disque.etat }">
+      <ion-card-header>Titre: {{disque.title}}</ion-card-header>
+      <ion-card-content>
+        <p>Auteur: {{disque.author}}</p>
+      </ion-card-content>
+    </ion-card>
+  
+    <ion-grid>
+      <ion-row >
+        <ion-col>
+          <button ion-button full color="secondary" 
+          (click)="onToggleCd()" 
+          [disabled]="disque.etat">Rendre</button>
+        </ion-col>
+        <ion-col>
+          <button ion-button full color="danger" 
+          (click)="onToggleCd()" 
+          [disabled]="!disque.etat">Prêter</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  
